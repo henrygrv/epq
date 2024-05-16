@@ -1,0 +1,92 @@
+\documentclass[]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[english]{babel}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage[bottom]{footmisc}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[hidelinks, final]{hyperref}
+
+\title{
+    To what extent will quantum computing systems replace high-performance computing (HPC) systems regarding computational biology? \\
+    \vspace{1cm}
+    \large{Centre Name: NCLT New College Pontefract}\\
+    \large{Centre Number: 38185}\\
+    \large{Qualification Code: 7993}\\
+}
+
+%  set up header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Henry Philip Groves - L0034335\newline Quantum Computing and Biological Modelling}
+\rhead{New College Pontefract - Centre Number: 38185}
+\lfoot{Qualification Code 7993}
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+% edit line spacing
+\renewcommand{\baselinestretch}{1.35} 
+
+\hypersetup{
+    colorlinks=false,
+    pdftitle={..},
+    pdfauthor={Henry Philip Groves - L0034335}
+}
+
+\graphicspath{ {./images/} }
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+% editing paragraph heading formatting
+\titleformat{\paragraph}[hang]{\small\bfseries}{\theparagraph.}{0.4em}{}
+
+% editing subparagraph heading formatting
+\titleformat{\subparagraph}[hang]{\small\bfseries}{\thesubparagraph.}{0.4em}{}
+\titlespacing*{\subparagraph}{0em}{3.25ex plus 1ex minus .2ex}{1em}
+
+\titleformat{\section}[display]{\centering\bfseries\huge}{}{}{}
+
+
+\author{Henry Philip Groves - L0034335}
+
+
+\date{February 2023}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\pdfbookmark{\contentsname}{toc}
+\tableofcontents
+
+
+\newpage
+\FloatBarrier
+\input{sections/introduction.tex}
+
+\newpage
+\FloatBarrier
+\input{sections/current-technology.tex}
+
+\newpage
+\FloatBarrier
+\input{sections/quantum-approach.tex}
+
+\newpage
+\FloatBarrier
+\input{sections/potential-solutions.tex}
+
+\newpage
+\FloatBarrier
+\input{sections/evaluation.tex}
+
+\bibliographystyle{ieeetr}
+\phantomsection
+\newpage
+\bibliography{bibliography.bib}
+\end{document}

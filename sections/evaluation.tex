@@ -1,0 +1,26 @@
+\phantomsection
+\addcontentsline{toc}{section}{Evaluation}
+\section*{Evaluation}
+
+High Performance Computing is going nowhere anytime soon, and will continue being the backbone of our computational needs for the forseeable future. It is low cost, highly scalable and can be set up in most environments. To be able to utilise the abilities that computational biology would provide us in the near future, HPC is the most viable option, and as processor and GPU technology improves, so will the performance of HPC. \\
+
+\noindent
+Whilst quantum computing can provide us with incredible benefits and speed-up over classical 
+computing, the technology still is not mature enough to provide much usefulness. There are many problems, such as the issue of coherence and scalability, that will have to be solved before quantum computing will become competitive. Additionally, even if we do eventually develop large scale quantum systems, I do not believe that they will fully replace our HPC systems that are already deployed. Some classical algorithms just cannot be sped up using quantum computers and so the additionally costs and complexity that comes with running said algorithm on a quantum system is not worth it. 
+
+After all, quantum computers are a completely different type of computer, not just an evolution of our current technology. There are so many problems that can be solved on a quantum computer that are just inconceivable on a classical computer, and so it is not injust to look at it in an opposite way.  \\ 
+
+\noindent
+When modelling biological systems, there are no quick and easy solutions when simulating large, complex systems with many variables. However, quantum computers have very special capabilities and features that, when properly developed and mature, could make a significant difference to our prediction and modelling of biological systems. Most important of those features is the ability for a quantum system to process multiple versions of simulations simultaneously, that would allow the finding of the minimum free energy. Modern MD simulations now include repeat simulations, in which a number of initial confirmations are investigated in parallel to check the robustness of any conclusions against thermal noise \cite{Quantum-assisted}. The potentially huge parallelisation provided by quantum computers could take this to the extreme, modelling hundreds of different starting conditions simultaneously. \\
+
+\noindent
+I therefore believe that Quantum Computers will only partially replace high performance classical computing in the field of computational biology. Whilst quantum computers can theoretically perform algorithms and functions critical to biological modelling, such as the Fast Fourier Transform and solving differential equations with a much greater efficiency than classical computers, there are many issues that prevent quantum computers fully replacing classical systems:
+
+\begin{enumerate}
+	\item Maintaining Coherence - Quantum systems cannot maintain coherence for the long  timescales that some modelling may require.
+	\item Cooling - To ensure that the amount of noise in the quantum system is as low as possible, quantum systems must be cooled to as low a temperature as possible. This requires large amounts of extra infrastructure and considerations when designing large scale quantum systems.
+	\item Nature of Superposition - Whilst some algorithms can exploit the features of superposed qubits, as the number of states contained within the superposition increases, it becomes more and more difficult to extract the desired value without having to do extra processing on top, which will scale with the number of superposed states in itself, potentially nullifying the benefits gained from quantum parallelism. 
+\end{enumerate}
+
+
+I think the most probable outcome is that we see hybrid quantum-classical supercomputers, where computations that can be made more efficient (that is, scale less as the number of inputs increase) by using a quantum approach are offloaded to quantum systems, where as computations that would provide no benefit, or even be slower on a quantum computer are kept on a classical machine. We have already seen this demonstrated by various companies that provide access to quantum computers over the cloud. Users interface with a classical computer to write the code to be executed on the quantum computer, and the classical system then measures the quantum state, providing an output to the user.  

@@ -1,0 +1,19 @@
+\phantomsection
+\addcontentsline{toc}{section}{Potential Solutions}
+\section*{Potential Solutions}
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Encode the entire system in superposition}
+\subsection*{Encode the entire system in superposition}
+This would use quantum parallelism to mimic the way that current classical algorithms work. That single classical computation could be carried out using an exponentially smaller amount of memory, but in turn, only provide a very small portion of data. This is therefore only suitable for simulations where the desired result is some global average that can be extracted from the probability of each state in memory. It also would require the whole computation to maintain coherence for the entire computation, and therefore is not likely to be suitable for modelling large biological systems where intricate detail is required.
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Perform multiple computations in superposition}
+\subsection*{Perform multiple computations in superposition}
+The system would be encoded the same way a classical simulation would be, resulting in no saved memory, but the quantum superposition still allows one to perform several computations in parallel. A single simulation could processes different initial conditions, each encoded separately simultaneously. The most favourable outcomes could then be selected using destructive interference of less favourable outcomes. 
+Multiple simultaneous computations could also be used to calculate the entropy of each molecule in the system, a variable that is often poorly estimated in classical models due to its high complexity, which would vastly increase the accuracy of simulations.
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Quantum Subroutines}
+\subsection*{Quantum Subroutines}
+A hybrid approach could be used, in which computations that are inefficient on a HPC are ran on a quantum computer. This means that quantum coherence only has to be maintained for the length of the timestep of the simulation, and so may be feasible sooner. The running time of the simulation would be decreased by the time factor that each time-step is decreased by.   
