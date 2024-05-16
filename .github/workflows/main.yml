@@ -1,0 +1,19 @@
+name: Build LaTeX document
+on: [push]
+permissions:
+  contents: write
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
+          latexmk_shell_escape: true
+          latexmk_use_xelatex: true
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -8bit
+      - name: Upload PDF file
+        run: "git config --local user.email \"github-actions@github.com\"\ngit config --local user.name \"github-actions\"\ngit add main.pdf\ngit commit -a -m \"Add main.pdf\"\ngit push \n"
